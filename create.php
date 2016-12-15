@@ -22,17 +22,17 @@ foreach ($Read->getResult() as $key => $value) {
 			if($DATA_TYPE=='decimal' || $DATA_TYPE=='numeric'):
 				$form[]="<label class=\"label\">";
 				$form[]="      <span class=\"legend\">{$COLUMN_NAME}:</span>";
-				$form[]="      <input style=\"font-size: 1.4em;\" type=\"text\" name=\"{$COLUMN_NAME}\" value=\"<?=$".$COLUMN_NAME.";?>\" required/>";
+				$form[]="      <input style=\"font-size: 1.4em;\" type=\"text\" placeholder=\"{$COLUMN_NAME}\" name=\"{$COLUMN_NAME}\" value=\"<?=$".$COLUMN_NAME.";?>\" required/>";
 				$form[]="</label>";
 			elseif ($DATA_TYPE=='timestamp'):
 				$form[]="<label class=\"label\">";
 				$form[]="      <span class=\"legend\">{$COLUMN_NAME}:</span>";
-				$form[]="      <input style=\"font-size: 1.4em;\" class=\"formTime\"  type=\"text\" name=\"{$COLUMN_NAME}\" value=\"<?=$".$COLUMN_NAME." ? date('d/m/Y H:i', strtotime($".$COLUMN_NAME.")) : date('d/m/Y H:i')?>\" required/>";
+				$form[]="      <input style=\"font-size: 1.4em;\" class=\"formTime\"  type=\"text\" placeholder=\"{$COLUMN_NAME}\" name=\"{$COLUMN_NAME}\" value=\"<?=$".$COLUMN_NAME." ? date('d/m/Y H:i', strtotime($".$COLUMN_NAME.")) : date('d/m/Y H:i')?>\" required/>";
 				$form[]="</label>";
 			else:
 				$form[]="<label class=\"label\">";
 				$form[]="      <span class=\"legend\">{$COLUMN_NAME}:</span>";
-				$form[]="      <input style=\"font-size: 1.4em;\" type=\"text\" name=\"{$COLUMN_NAME}\" value=\"<?=$".$COLUMN_NAME.";?>\" required/>";
+				$form[]="      <input style=\"font-size: 1.4em;\" type=\"text\" placeholder=\"{$COLUMN_NAME}\" name=\"{$COLUMN_NAME}\" value=\"<?=$".$COLUMN_NAME.";?>\" required/>";
 				$form[]="</label>";
 			endif;
 		endif;

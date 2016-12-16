@@ -32,7 +32,7 @@ endif;
 
 <header class="dashboard_header">
     <div class="dashboard_header_title">
-        <h1 class="icon-new-tab"><?= $title ? $$title : "Novo Cadastro"; ?></h1>
+        <h1 class="icon-new-tab"><?= $TITLE ? $$TITLE : "Novo Cadastro"; ?></h1>
         <p class="dashboard_header_breadcrumbs">
             &raquo; <?= ADMIN_NAME; ?>
             <span class="crumb">/</span>
@@ -46,7 +46,7 @@ endif;
 
     <?php if($VERNO_SITE):?>
     <div class="dashboard_header_search">
-        <a target="_blank" title="Ver no site" href="<?= BASE; ?>/artigo/<?= $$name; ?>" class="wc_view btn btn_green icon-eye">Ver artigo no site!</a>
+        <a target="_blank" title="Ver no site" href="<?= BASE; ?>/artigo/<?= $$NAME; ?>" class="wc_view btn btn_green icon-eye">Ver artigo no site!</a>
     </div>
     <?php endif;?>
 </header>
@@ -89,7 +89,7 @@ endif;
          require_once $file;
         ?>
         <div class="wc_actions" style="text-align: center">
-            <label class="label_check label_publish <?= ($$status == 1 ? 'active' : ''); ?>"><input style="margin-top: -1px;" type="checkbox" value="1" name="<?=$status;?>" <?= ($$status == 1 ? 'checked' : ''); ?>> Publicar Agora!</label>
+            <label class="label_check label_publish <?= ($$STATUS == 1 ? 'active' : ''); ?>"><input style="margin-top: -1px;" type="checkbox" value="1" name="<?=$STATUS;?>" <?= ($$STATUS == 1 ? 'checked' : ''); ?>> Publicar Agora!</label>
             <button name="public" value="1" class="btn btn_green icon-share">ATUALIZAR</button>
             <img class="form_load none" style="margin-left: 10px;" alt="Enviando Requisição!" title="Enviando Requisição!" src="_img/load.gif"/>
         </div>
